@@ -1,4 +1,5 @@
 import { Stack } from 'expo-router';
+import { useColorScheme } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 
 export default function RootLayout() {
@@ -6,7 +7,6 @@ export default function RootLayout() {
     <PaperProvider>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" options={{ title: 'Page non trouvée' }} />
       </Stack>
     </PaperProvider>
   );
