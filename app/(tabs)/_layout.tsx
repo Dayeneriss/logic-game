@@ -3,26 +3,30 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default function TabsLayout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: '#6200ee',
+      }}
+    >
       <Tabs.Screen
         name="home"
         options={{
           title: 'Accueil',
-          tabBarIcon: ({ color }) => <Ionicons name="home" size={24} color={color} />,
+          tabBarIcon: ({ color, size }) => <Ionicons name="home" size={size} color={color} />,
         }}
       />
       <Tabs.Screen
         name="game"
         options={{
           title: 'Jeu',
-          tabBarIcon: ({ color }) => <Ionicons name="game-controller" size={24} color={color} />,
+          tabBarIcon: ({ color, size }) => <Ionicons name="game-controller" size={size} color={color} />,
         }}
       />
       <Tabs.Screen
         name="stats"
         options={{
           title: 'Statistiques',
-          tabBarIcon: ({ color }) => <Ionicons name="stats-chart" size={24} color={color} />,
+          tabBarIcon: ({ color, size }) => <Ionicons name="stats-chart" size={size} color={color} />,
         }}
       />
     </Tabs>
